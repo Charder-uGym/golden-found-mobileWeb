@@ -8,7 +8,7 @@
 
 <head>
   <script>
-    var ver="V0.9";
+    var ver="V0.91";
     console.log("Version:",ver);
     var useLocalAPIs = false;  
   </script> 
@@ -145,10 +145,12 @@
     <div style="height:230px; background-color:black; text-align:center;">
       <img src="金機.png" height="60px" style="margin-top:10px"><br><br>
 
-      <a id="客戶名稱" style="color:white; font-size:24px;"></a><br><br>
+      <a id="客戶名稱" style="color:white; font-size:24px; display:none;"></a><br>
+      <a id="登出訊息" style="font-size:˙6px; display:none"> 刷新網頁就會登出 </a>
+      <br><br>
       <a class="" style="font-size: 18px; color: white; float:right;margin-right:15px; background-color:red; padding:10px;border-radius:8px" onclick="getDataByPhone()">搜尋</a> 
            
-      <input id="userPhone" style="font-size:18px; float:right; margin-right:10px; color:black; background-color:whitesmoke; padding:10px; border-radius:8px; border:0; width:150px" placeholder="請輸入電話號碼"><br><br><br>
+      <input id="userPhone" style="font-size:18px; float:right; margin-right:10px; color:black; background-color:whitesmoke; padding:10px; border-radius:8px; border:0; width:150px" placeholder="請輸入電話號碼"><br><br>
 
       <span id="量測記錄title" class="進行量測Label" style="float:left; padding-top: 0px">量測記錄</span>
            
@@ -383,6 +385,8 @@
           } else {
             returnObj=JSON.parse(returnData);
             客戶名稱=returnObj.客戶名稱;
+            $("#客戶名稱").show();
+            $("#登出訊息").show();          
             apiSite=returnObj.apiBase;
           }
         },
