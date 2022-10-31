@@ -371,7 +371,8 @@
       var noMatch=false;
       var databaseErr = false;
       var returnObj={};
-      apiUrl = "https://golden-found-api.herokuapp.com/"+"?API=03&SuperKey=mpn6hnClHg&UserId="+$("#username").val()+"&Password="+$("#password").val();
+      apiUrl = "https://makerkang.com:3100/"+"?API=03&SuperKey=mpn6hnClHg&UserId="+$("#username").val()+"&Password="+$("#password").val();
+      //apiUrl = "https://golden-found-api.herokuapp.com/"+"?API=03&SuperKey=mpn6hnClHg&UserId="+$("#username").val()+"&Password="+$("#password").val();  
       console.log(apiUrl);
       await $.ajax({
         url: apiUrl,
